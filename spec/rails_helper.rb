@@ -17,5 +17,7 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   config.include FactoryBot::Syntax::Methods
   config.include(Shoulda::Matchers::ActiveRecord, type: :model)
-  # config.filter_gems_from_backtrace("gem name")
+  config.include ResponseJSON
+  config.filter_gems_from_backtrace("capybara")
+  config.filter_gems_from_backtrace("rack")
 end
