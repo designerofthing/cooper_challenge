@@ -17,7 +17,7 @@ RSpec.describe "POST '/api/v1/auth'", type: :request do
         end
 
         it 'returns a success message' do
-            expect(resonse_json['status'].to eq 'success')
+            expect(response_json['status']).to eq 'success'
         end
     end
     
@@ -62,7 +62,7 @@ RSpec.describe "POST '/api/v1/auth'", type: :request do
             end
 
             it 'returns an error message' do
-                expect(response_json['errors']['email'].to eq ['is not an email'])
+                expect(response_json['errors']['email']).to eq ['is not an email']
             end
         end
 
